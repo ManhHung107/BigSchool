@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "LectureIamGoing";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <ul class="course">
+        @foreach (var course in Model)
+        {
+            <li>
+                <div class="date">
+                    <div class="month">
+                        @course.Datetime.ToString("MM")
+                    </div>
+
+                    <div class="day">
+                        @course.Datetime.ToString("dd")
+                    </div>
+                </div>
+
+                <div class="details">
+
+                    <span class="lecture" style="font-size:18px">@course.LecturerName</span>
+                    <br />
+                    <span class="category">@course.Category.Name</span>
+                </div>
+            </li>
+        }
+    </ul>
+</div>
+
