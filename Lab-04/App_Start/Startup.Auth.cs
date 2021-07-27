@@ -58,11 +58,11 @@ namespace Lab_04
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "568683131675-agmqv6mdth6dtvn8r7do8mic32eh6nq7.apps.googleusercontent.com",
+                ClientSecret = "707ZvM6l9KzL41NIOnjbrIjF"
+            });
         }
     }
 }

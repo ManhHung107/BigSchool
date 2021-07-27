@@ -20,6 +20,7 @@ namespace Lab_04.Controllers
         public ActionResult Create()
         {
             BigSchoolContext context = new BigSchoolContext();
+            
 
             Course objCourse = new Course();
             objCourse.ListCategory = context.Categories.ToList();
@@ -31,7 +32,7 @@ namespace Lab_04.Controllers
         public ActionResult Create(Course objCourse)
         {
 
-            ModelState.Remove("LectureId");
+            ModelState.Remove("LecturerId");
             if (!ModelState.IsValid)
             {
                 objCourse.ListCategory = context.Categories.ToList();
